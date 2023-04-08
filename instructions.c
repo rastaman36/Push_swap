@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add_front.c                                        :+:      :+:    :+:   */
+/*   instructions.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/19 21:26:51 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/04 05:36:32 by mochaoui         ###   ########.fr       */
+/*   Created: 2023/04/08 06:50:20 by mochaoui          #+#    #+#             */
+/*   Updated: 2023/04/08 07:22:19 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	add_to_stack(t_stack *stack, s_list *l_numbers, t_data *dt)
 {
-	if (lst && new)
+	s_list	*ptr;
+
+	ptr = l_numbers;
+	while (ptr)
 	{
-		new->next = *lst;
-		*lst = new;
+		ft_lstadd_back(&(stack->top_of_stack), ft_lstnew(ptr->content));
+		ptr = ptr->next;
 	}
+	stack->size = ft_lstsize(stack->top_of_stack);
+    printf("%d", dt->stack_a->size);
 }

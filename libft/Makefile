@@ -6,14 +6,14 @@
 #    By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/09 17:44:27 by mochaoui          #+#    #+#              #
-#    Updated: 2023/04/04 05:38:56 by mochaoui         ###   ########.fr        #
+#    Updated: 2023/04/08 06:15:26 by mochaoui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 SRCS = ft_strjoin.c ft_split.c ft_strdup.c \
 ft_strlcpy.c ft_strlen.c ft_strlcat.c  ft_substr.c ft_putchar_fd.c ft_putstr_fd.c \
-ft_putendl_fd.c ft_putnbr_fd.c  ft_strcmp.c ft_strncmp.c ft_strrchr.c ft_strtrim.c ft_strchr.c ft_itoa.c add_back.c add_front.c last.c
+ft_putendl_fd.c ft_putnbr_fd.c  ft_strcmp.c ft_strncmp.c ft_strrchr.c ft_strtrim.c ft_strchr.c ft_itoa.c
 
 
 NAME = libft.a
