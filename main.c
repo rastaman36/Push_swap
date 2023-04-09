@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 05:18:25 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/08 07:26:35 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/09 00:31:30 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ int main (int ac, char **av)
 		if (!dt->stack_a || !dt->stack_b)
 			return (0);
 		dt->stack_b->top_of_stack = NULL;
-		add_to_stack(dt->stack_a, dt->numbers, dt);
-		
+		add_to_stack(dt->stack_a, dt->numbers);
+		sorting(dt->numbers);
 	}
 	return (0);
 }
