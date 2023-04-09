@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 06:50:20 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/09 00:51:48 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/09 03:35:28 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,17 +45,16 @@ void	sorting(s_list *numbers)
 	}
 }
 
-int	check_ber(char *file)
+int	check_sorted_list(t_data *dt)
 {
-	char	*ext;
+	s_list	*ptr;
 
-	ext = ft_strrchr(file, '.');
-	if (!file)
-		return (0);
-	if (ft_strncmp(ext, ".ber", 5))
+	ptr = dt->stack_a->top_of_stack;
+	while (ptr && ptr->next)
 	{
-		write(2, ".ber error", 11);
-		exit (1);
+		if (ptr->content > ptr->next->content)
+			return (0);
+		ptr = ptr->next;
 	}
 	return (1);
 }
