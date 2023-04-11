@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 03:36:01 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/09 03:40:22 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/10 01:43:12 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,6 @@ void	sorting_algorithm(t_data *dt)
 	if (check_sorted_list(dt))
 		exit(0);
     if (dt->stack_a->size <= 3)
+    
         
 }

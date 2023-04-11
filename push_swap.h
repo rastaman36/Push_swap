@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 05:18:47 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/09 03:38:51 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/11 03:01:55 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,4 @@ int		ft_lstsize(s_list *lst);
 int		ft_atoi(const char *str);
 void	add_to_stack(t_stack *stack, s_list *l_numbers);
 void	sorting(s_list *numbers);
-int		check_sorted_list(t_data *dt)
+int		check_sorted_list(t_data *dt);
