@@ -6,11 +6,16 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 03:36:01 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/11 04:48:49 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/11 05:48:00 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int	bigest(t_stack *stack)
+{
+	int
+}
 
 void	sort3(t_stack *stack)
 {

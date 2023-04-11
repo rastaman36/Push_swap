@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 06:50:20 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/09 03:35:28 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/11 07:09:21 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	add_to_stack(t_stack *stack, s_list *l_numbers)
 {
 	s_list	*ptr;
 
-	ptr = l_numbers;
+	ptr = l_numbers;;
 	while (ptr)
 	{
 		ft_lstadd_back(&(stack->top_of_stack), ft_lstnew(ptr->content));

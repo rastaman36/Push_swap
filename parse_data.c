@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 03:06:30 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/08 07:01:45 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/11 05:26:24 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_double_args(t_data *dt)
 
 	i = 0;
 	j = 0;
+	dt->numbers = NULL;
 	while (dt->array_arg[i])
 	{
 		j = i + 1;
@@ -35,7 +36,6 @@ void	ft_double_args(t_data *dt)
 	{
 		dt->saved_atoi = ft_atoi(dt->array_arg[i]);
 		ft_lstadd_back(&dt->numbers, ft_lstnew(dt->saved_atoi));
-		// printf("%d\n", dt->saved_atoi);
 		i++;
 	}
 }
