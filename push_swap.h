@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 05:18:47 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/11 04:47:56 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/12 00:15:36 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,3 +56,8 @@ void	sorting(s_list *numbers);
 int		check_sorted_list(t_data *dt);
 void	sorting_algorithm(t_data *dt);
 void	rotate_a(t_stack *stack);
+void	reverse_rotate_a(t_stack *stack);
+void	swap_a(t_stack *stack);
+void	sort3(t_stack *stack);
+int		bigest(t_stack *stack);
+int		smallest(t_stack *stack);
