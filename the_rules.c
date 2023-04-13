@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 03:44:08 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/09 04:05:30 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/12 04:27:54 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,11 +113,9 @@ void	push_b(t_data *dt)
 void	rotate_a(t_stack *stack)
 {
 	int		content;
-	s_list	*ptr;
 
 	if (stack->size <= 1)
 		return ;
-	ptr = stack->top_of_stack;
 	content = pop(stack);
 	push(stack, content);
 	write(1, "ra\n", 3);
@@ -126,11 +124,9 @@ void	rotate_a(t_stack *stack)
 void	rotate_b(t_stack *stack)
 {
 	int		content;
-	s_list	*ptr;
 
 	if (stack->size <= 1)
 		return ;
-	ptr = stack->top_of_stack;
 	content = pop(stack);
 	push(stack, content);
 	write(1, "rb\n", 3);
@@ -139,14 +135,11 @@ void	rotate_b(t_stack *stack)
 void	rr(t_data *dt)
 {
 	int		content;
-	s_list	*ptr;
 
 	if (dt->stack_a->size <= 1 || dt->stack_b->size <= 1)
 		return ;
-	ptr = dt->stack_a->top_of_stack;
 	content = pop(dt->stack_a);
 	push(dt->stack_a, content);
-	ptr = dt->stack_b->top_of_stack;
 	content = pop(dt->stack_b);
 	push(dt->stack_b, content);
 	write(1, "rr\n", 3);

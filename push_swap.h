@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 05:18:47 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/12 00:15:36 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/13 02:35:26 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,3 +61,9 @@ void	swap_a(t_stack *stack);
 void	sort3(t_stack *stack);
 int		bigest(t_stack *stack);
 int		smallest(t_stack *stack);
+int		index_bigest(t_stack *stack);
+int		index_smallest(t_stack *stack);
+int		get_index(t_data *dt);
+void	push_a(t_data *dt);
+void	push_b(t_data *dt);
+void	sort5(t_data *dt);
