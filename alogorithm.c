@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 03:36:01 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/13 19:43:45 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/14 02:11:19 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	index_smallest(t_stack *stack)
 	ptr = stack->top_of_stack;
 	while (ptr)
 	{
-		if (ptr->content == smallest(stack))
+		if (ptr->content == small_number(stack))
 			return (i);
 		ptr = ptr->next;
 		i++;
@@ -55,7 +55,7 @@ int	index_bigest(t_stack *stack)
 	ptr = stack->top_of_stack;
 	while (ptr)
 	{
-		if (ptr->content == bigest(stack))
+		if (ptr->content == big_number(stack))
 			return (i);
 		ptr = ptr->next;
 		i++;
@@ -64,7 +64,7 @@ int	index_bigest(t_stack *stack)
 }
 
 
-int	bigest(t_stack *stack)
+int	big_number(t_stack *stack)
 {
 	int		biggest_number;
 	s_list	*ptr;
@@ -80,7 +80,7 @@ int	bigest(t_stack *stack)
 	return (biggest_number);
 }
 
-int	smallest(t_stack *stack)
+int	small_number(t_stack *stack)
 {
 	int		smallest_number;
 	s_list	*ptr;
@@ -103,13 +103,13 @@ void	sort3(t_stack *stack)
 		rotate_a(stack);
 		exit(0);
 	}
-	if (stack->top_of_stack->content == bigest(stack))
+	if (stack->top_of_stack->content == big_number(stack))
 		rotate_a(stack);
-	if (stack->top_of_stack->next->content == bigest(stack))
+	if (stack->top_of_stack->next->content == big_number(stack))
 		reverse_rotate_a(stack);
 	if (stack->size > 2)
-		if (stack->top_of_stack->next->content == smallest(stack) && \
-		stack->top_of_stack->next->next->content == bigest(stack))
+		if (stack->top_of_stack->next->content == small_number(stack) && \
+		stack->top_of_stack->next->next->content == big_number(stack))
 			swap_a(stack);
 }
 
@@ -120,7 +120,7 @@ void	sort5(t_data *dt)
 	index = index_smallest(dt->stack_a);
 	while (dt->stack_a->size > 3)
 	{
-		while (dt->stack_a->top_of_stack->content != smallest(dt->stack_a))
+		while (dt->stack_a->top_of_stack->content != small_number(dt->stack_a))
 		{
 			if (index > dt->stack_a->size / 2)
 				reverse_rotate_a(dt->stack_a);

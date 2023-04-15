@@ -6,7 +6,7 @@
 #    By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/04 05:18:14 by mochaoui          #+#    #+#              #
-#    Updated: 2023/04/12 00:17:37 by mochaoui         ###   ########.fr        #
+#    Updated: 2023/04/14 02:14:20 by mochaoui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = push_swap
 
 CC = cc
 
-CFLAGS = -Werror -Wall -Wextra #-fsanitize=address -g3
+CFLAGS = -Werror -Wall -Wextra #fsanitize=address -g3
 
 RM = rm -rf
 
