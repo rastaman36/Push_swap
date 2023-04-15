@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 05:18:47 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/14 01:51:58 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/15 01:03:17 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ typedef struct s_data
 {
 	char 	**array_arg;
 	int		saved_atoi;
+	int		range_min;
+	int		range_max;
+	int		node_index;
 	s_list	*numbers;
 	t_stack	*stack_a;
 	t_stack *stack_b;
@@ -61,9 +64,13 @@ void	swap_a(t_stack *stack);
 void	sort3(t_stack *stack);
 int		big_number(t_stack *stack);
 int		small_number(t_stack *stack);
-int		index_bigest(t_stack *stack);
-int		index_smallest(t_stack *stack);
+int		index_big_number(t_stack *stack);
+int		index_small_number(t_stack *stack);
 int		get_index(t_data *dt);
 void	push_a(t_data *dt);
 void	push_b(t_data *dt);
 void	sort5(t_data *dt);
+void	sort_range(t_data *dt);
+void	rotate_b(t_stack *stack);
+void	the_last_sorting(t_data *dt);
+void	reverse_rotate_b(t_stack *stack);
