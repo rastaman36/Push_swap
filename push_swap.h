@@ -6,9 +6,12 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 05:18:47 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/15 01:03:17 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/16 01:34:14 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
 # include <fcntl.h>
 # include <limits.h>
@@ -19,43 +22,40 @@
 
 typedef struct d_list
 {
-	int			content;
+	int				content;
 	struct d_list	*next;
-}	s_list;
+}	t_list;
 
 typedef struct s_stack
 {
-	s_list	*top_of_stack;
+	t_list	*top_of_stack;
 	int		size;
 }	t_stack;
 
 typedef struct s_data
 {
-	char 	**array_arg;
+	char	**array_arg;
 	int		saved_atoi;
 	int		range_min;
 	int		range_max;
 	int		node_index;
-	s_list	*numbers;
+	t_list	*numbers;
 	t_stack	*stack_a;
-	t_stack *stack_b;
+	t_stack	*stack_b;
 }	t_data;
-
-
-
 
 int		valid_argument(char *str);
 int		cmp_integers(char *s1, char *s2);
 char	**spliting_arguments(char **str);
 void	ft_double_args(t_data *dt);
-s_list	*ft_lstnew(int content);
+t_list	*ft_lstnew(int content);
 void	ft_error(void);
-void	ft_lstadd_back(s_list **lst, s_list *new);
-void	ft_lstadd_front(s_list **lst, s_list *new);
-int		ft_lstsize(s_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
 int		ft_atoi(const char *str);
-void	add_to_stack(t_stack *stack, s_list *l_numbers);
-void	sorting(s_list *numbers);
+void	add_to_stack(t_stack *stack, t_list *l_numbers);
+void	sorting(t_list *numbers);
 int		check_sorted_list(t_data *dt);
 void	sorting_algorithm(t_data *dt);
 void	rotate_a(t_stack *stack);
@@ -74,3 +74,10 @@ void	sort_range(t_data *dt);
 void	rotate_b(t_stack *stack);
 void	the_last_sorting(t_data *dt);
 void	reverse_rotate_b(t_stack *stack);
+int		pop(t_stack *stack);
+void	push(t_stack *stack, int content);
+void	push_to_a(t_stack *stack, int content);
+void	push_to_b(t_stack *stack, int content);
+int		get_index(t_data *dt);
+
+#endif

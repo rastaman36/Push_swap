@@ -6,17 +6,15 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 05:18:25 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/12 04:44:18 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/16 01:11:40 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-int main (int ac, char **av)
+int	main(int ac, char **av)
 {
-    t_data	*dt;
-
+	t_data	*dt;
 	int		a;
 
 	a = 1;

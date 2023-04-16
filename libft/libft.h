@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 11:15:37 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/08 06:15:17 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/16 01:30:45 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,6 @@
 # include <string.h>
 # include <stddef.h>
 # include <stdlib.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
 
 size_t	ft_strlen(const char *str);
 void	ft_putnbr_fd(int n, int fd);
@@ -42,6 +36,5 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
-
 
 #endif

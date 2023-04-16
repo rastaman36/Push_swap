@@ -6,7 +6,7 @@
 #    By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/04 05:18:14 by mochaoui          #+#    #+#              #
-#    Updated: 2023/04/14 02:14:20 by mochaoui         ###   ########.fr        #
+#    Updated: 2023/04/16 01:06:59 by mochaoui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CFLAGS = -Werror -Wall -Wextra #fsanitize=address -g3
 
 RM = rm -rf
 
-SRCS = main.c parse_data.c lst.c ft_atoi.c instructions.c the_rules.c alogorithm.c
+SRCS = main.c parse_data.c lst.c ft_atoi.c instructions.c the_rules.c the_rules1.c the_rules2.c alogorithm.c toolsalgorithm.c
 
 $(NAME) :
 	make all -C libft

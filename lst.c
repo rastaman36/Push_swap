@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 05:25:09 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/08 05:42:35 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/16 01:35:45 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	ft_error(void)
 	exit(1);
 }
 
-void	ft_lstadd_back(s_list **lst, s_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	s_list	*d;
+	t_list	*d;
 
 	if (!lst || !new)
 		return ;
@@ -35,7 +35,7 @@ void	ft_lstadd_back(s_list **lst, s_list *new)
 		*lst = new;
 }
 
-void	ft_lstadd_front(s_list **lst, s_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (new)
 	{
@@ -44,11 +44,11 @@ void	ft_lstadd_front(s_list **lst, s_list *new)
 	}
 }
 
-s_list	*ft_lstnew(int content)
+t_list	*ft_lstnew(int content)
 {
-	s_list	*file;
+	t_list	*file;
 
-	file = (s_list *)malloc(sizeof(s_list));
+	file = (t_list *)malloc(sizeof(t_list));
 	if (!file)
 		return (NULL);
 	file->content = content;
@@ -56,7 +56,7 @@ s_list	*ft_lstnew(int content)
 	return (file);
 }
 
-int	ft_lstsize(s_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	i;
 

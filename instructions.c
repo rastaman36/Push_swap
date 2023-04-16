@@ -6,17 +6,17 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 06:50:20 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/11 07:09:21 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/16 01:36:07 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	add_to_stack(t_stack *stack, s_list *l_numbers)
+void	add_to_stack(t_stack *stack, t_list *l_numbers)
 {
-	s_list	*ptr;
+	t_list	*ptr;
 
-	ptr = l_numbers;;
+	ptr = l_numbers;
 	while (ptr)
 	{
 		ft_lstadd_back(&(stack->top_of_stack), ft_lstnew(ptr->content));
@@ -25,10 +25,10 @@ void	add_to_stack(t_stack *stack, s_list *l_numbers)
 	stack->size = ft_lstsize(stack->top_of_stack);
 }
 
-void	sorting(s_list *numbers)
+void	sorting(t_list *numbers)
 {
 	int		swap;
-	s_list	*ptr_sorted;
+	t_list	*ptr_sorted;
 
 	ptr_sorted = numbers;
 	while (numbers && numbers->next)
@@ -47,7 +47,7 @@ void	sorting(s_list *numbers)
 
 int	check_sorted_list(t_data *dt)
 {
-	s_list	*ptr;
+	t_list	*ptr;
 
 	ptr = dt->stack_a->top_of_stack;
 	while (ptr && ptr->next)
