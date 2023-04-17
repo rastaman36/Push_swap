@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 05:18:47 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/17 01:13:57 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/17 03:13:32 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "libft/libft.h"
-# include "pro/ft_printf.h"
 
 typedef struct d_list
 {
@@ -80,5 +79,20 @@ void	push(t_stack *stack, int content);
 void	push_to_a(t_stack *stack, int content);
 void	push_to_b(t_stack *stack, int content);
 int		get_index(t_data *dt);
+void	bonus_swap_a(t_stack *stack);
+void	bonus_rotate_b(t_stack *stack);
+void	bonus_rr(t_data *dt);
+void	bonus_reverse_rotate_a(t_stack *stack);
+void	bonus_reverse_rotate_b(t_stack *stack);
+void	bonus_rrr(t_data *dt);
+void	bonus_swap_b(t_stack *stack);
+void	bonus_ss(t_data *dt);
+void	bonus_push_a(t_data *dt);
+void	bonus_push_b(t_data *dt);
+void	bonus_rotate_a(t_stack *stack);
+void	check_args(int argc, char **argv);
+void	instruction(t_data *dt, char *str);
+int		check_if_sorted(t_data *dt);
+char	*get_next_line(int fd);
 
 #endif

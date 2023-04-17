@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   the_rules_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 18:28:46 by mochaoui          #+#    #+#             */
-/*   Updated: 2022/11/04 21:16:37 by mochaoui         ###   ########.fr       */
+/*   Created: 2023/04/17 02:27:07 by mochaoui          #+#    #+#             */
+/*   Updated: 2023/04/17 03:30:40 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "push_swap.h"
 
-void	ft_putchar(int c, int *counter)
+void	bonus_swap_a(t_stack *stack)
 {
-	write (1, &c, 1);
-	*counter += 1;
+	int	swap;
+
+	if (stack->size <= 1)
+		return ;
+	swap = stack->top_of_stack->content;
+	stack->top_of_stack->content = stack->top_of_stack->next->content;
+	stack->top_of_stack->next->content = swap;
 }
