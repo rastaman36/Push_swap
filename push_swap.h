@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 05:18:47 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/16 01:34:14 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/17 01:13:57 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ void	rotate_b(t_stack *stack);
 void	the_last_sorting(t_data *dt);
 void	reverse_rotate_b(t_stack *stack);
 int		pop(t_stack *stack);
+void	*ft_calloc(size_t count, size_t size);
 void	push(t_stack *stack, int content);
 void	push_to_a(t_stack *stack, int content);
 void	push_to_b(t_stack *stack, int content);

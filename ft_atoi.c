@@ -38,3 +38,20 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
+
+void	*ft_calloc(size_t count, size_t size)
+{
+	char	*s;
+	size_t	i;
+
+	i = 0;
+	s = (char *)malloc(count * size);
+	if (!s)
+		return (NULL);
+	while (i < (count * size))
+	{
+		s[i] = 0;
+		i++;
+	}
+	return (s);
+}

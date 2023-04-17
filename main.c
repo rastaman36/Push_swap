@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 05:18:25 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/16 23:49:41 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/17 01:15:36 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(int ac, char **av)
 	int		a;
 
 	a = 1;
-	dt = malloc(sizeof(t_data));
+	dt = ft_calloc(1, sizeof(t_data));
 	if (!dt || ac > 1)
 	{
 		while (a < ac)
@@ -29,14 +29,15 @@ int	main(int ac, char **av)
 		}
 		dt->array_arg = spliting_arguments(av);
 		ft_double_args(dt);
-		dt->stack_b = malloc(sizeof(t_stack));
-		dt->stack_a = malloc(sizeof(t_stack));
+		dt->stack_b = ft_calloc(1, sizeof(t_stack));
+		dt->stack_a = ft_calloc(1, sizeof(t_stack));
 		if (!dt->stack_a || !dt->stack_b)
 			return (0);
 		dt->stack_b->top_of_stack = NULL;
 		add_to_stack(dt->stack_a, dt->numbers);
 		sorting(dt->numbers);
 		sorting_algorithm(dt);
+		while (1);
 	}
 	return (0);
 }

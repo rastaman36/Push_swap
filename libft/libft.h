@@ -6,18 +6,20 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 11:15:37 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/16 23:48:04 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/17 00:48:31 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <fcntl.h>
+# include <limits.h>
+# include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
 # include <string.h>
 # include <stddef.h>
-# include <stdlib.h>
 
 size_t	ft_strlen(const char *str);
 void	ft_putnbr_fd(int n, int fd);
