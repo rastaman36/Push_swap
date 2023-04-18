@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 02:40:36 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/18 05:42:48 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/18 06:27:19 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,9 +79,9 @@ void	check_args(int ac, char **av)
 
 int	main(int ac, char **av)
 {
-	char	*array;
 	t_data	*dt;
 
+	check_args(ac, av);
 	dt = ft_calloc(1, sizeof(t_data));
 	if (!dt || ac > 1)
 	{
@@ -93,13 +93,8 @@ int	main(int ac, char **av)
 			return (0);
 		add_to_stack(dt->stack_a, dt->numbers);
 		sorting(dt->numbers);
-		array = get_next_line(0);
-		while (array)
-		{
-			instruction(dt, array);
-			free(array);
-			array = get_next_line(0);
-		}
+		dt->array = get_next_line(0);
+		cmp_inst(dt);
 		if (check_if_sorted(dt))
 			write(1, "OK\n", 3);
 	}

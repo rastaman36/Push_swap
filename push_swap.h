@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 05:18:47 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/18 02:47:35 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/18 06:25:13 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_stack
 
 typedef struct s_data
 {
+	char	*array;
 	char	**array_arg;
 	int		saved_atoi;
 	int		range_min;
@@ -90,6 +91,8 @@ void	bonus_ss(t_data *dt);
 void	bonus_push_a(t_data *dt);
 void	bonus_push_b(t_data *dt);
 void	bonus_rotate_a(t_stack *stack);
+void	instruction(t_data *dt, char *str);
+void	cmp_inst(t_data *dt);
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE  100
