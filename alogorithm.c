@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 03:36:01 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/18 01:31:07 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/18 02:28:50 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,21 @@
 
 void	sort3(t_stack *stack)
 {
-	if (stack->top_of_stack->content > stack->top_of_stack->next->content)
+	if (stack->size <= 2)
 	{
-		rotate_a(stack);
-		exit(0);
+		if (stack->top_of_stack->content > stack->top_of_stack->next->content)
+		{
+			rotate_a(stack);
+			exit(0);
+		}
 	}
 	if (stack->top_of_stack->content == big_number(stack))
 		rotate_a(stack);
 	if (stack->top_of_stack->next->content == big_number(stack))
 		reverse_rotate_a(stack);
 	if (stack->size > 2)
-		if (stack->top_of_stack->next->content == small_number(stack) && \
-		stack->top_of_stack->next->next->content == big_number(stack))
+		if (stack->top_of_stack->next->content == small_number(stack) \
+		&& stack->top_of_stack->next->next->content == big_number(stack))
 			swap_a(stack);
 }
 

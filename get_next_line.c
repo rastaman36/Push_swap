@@ -6,17 +6,17 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:01:03 by mochaoui          #+#    #+#             */
-/*   Updated: 2022/11/20 13:19:34 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/18 02:47:26 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "push_swap.h"
 
 char	*join_and_free(char *buffer, char *clean)
 {
 	char	*result;
 
-	result = ft_strjoin(buffer, clean);
+	result = ft_strjoin2(buffer, clean);
 	free(buffer);
 	return (result);
 }
@@ -36,7 +36,7 @@ char	*check_rest(char *string)
 		free(string);
 		return (NULL);
 	}
-	save = ft_calloc((ft_strlen(string) - index1 + 1), sizeof(char));
+	save = ft_calloc2((ft_strlen(string) - index1 + 1), sizeof(char));
 	index1++;
 	while (string[index1])
 		save[index2++] = string[index1++];
@@ -54,7 +54,7 @@ char	*checking_line(char *string)
 		return (NULL);
 	while (string[a] && string[a] != '\n')
 		a++;
-	clear = ft_calloc(a + 2, sizeof(char));
+	clear = ft_calloc2(a + 2, sizeof(char));
 	a = 0;
 	while (string[a] && string[a] != '\n')
 	{
@@ -73,8 +73,8 @@ char	*readingfile(int fd, char *result)
 
 	reading_byte = 1;
 	if (!result)
-		result = ft_calloc(1, 1);
-	buff = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
+		result = ft_calloc2(1, 1);
+	buff = ft_calloc2(BUFFER_SIZE + 1, sizeof(char));
 	while (!ft_strchr(result, '\n') && reading_byte != 0)
 	{
 		reading_byte = read(fd, buff, BUFFER_SIZE);

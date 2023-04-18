@@ -6,11 +6,11 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:21:49 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/02/02 21:27:27 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/18 02:47:08 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "push_swap.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -38,7 +38,7 @@ size_t	ft_strlen(const char *str)
 	return (a);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin2(char const *s1, char const *s2)
 {
 	int		a;
 	int		on;
@@ -78,7 +78,7 @@ void	*ft_memset(void *d, int c, size_t n)
 	return (d);
 }
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc2(size_t count, size_t size)
 {
 	void	*ptr;
 

@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 05:18:47 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/17 05:35:15 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/18 02:47:35 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,9 +90,18 @@ void	bonus_ss(t_data *dt);
 void	bonus_push_a(t_data *dt);
 void	bonus_push_b(t_data *dt);
 void	bonus_rotate_a(t_stack *stack);
-void	check_args(int ac, char **av);
-void	instruction(t_data *dt, char *str);
-int		check_if_sorted(t_data *dt);
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE  100
+
+# endif
+
 char	*get_next_line(int fd);
+char	*ft_strchr(const char *s, int c);
+size_t	ft_strlen(const char *str);
+char	*ft_strjoin2(char const *s1, char const *s2);
+void	*ft_memset(void *d, int c, size_t n);
+void	ft_bzero(void *s, size_t n);
+void	*ft_calloc2(size_t count, size_t size);
 
 #endif
