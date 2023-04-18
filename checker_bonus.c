@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 02:40:36 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/17 03:30:51 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/17 05:35:45 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,28 +64,28 @@ void	instruction(t_data *dt, char *str)
 		ft_error();
 }
 
-void	check_args(int argc, char **argv)
+void	check_args(int ac, char **av)
 {
 	int	i;
 
 	i = 1;
-	while (i < argc)
+	while (i < ac)
 	{
-		if (!valid_argument(argv[i]))
+		if (!valid_argument(av[i]))
 			ft_error();
 		i++;
 	}
 }
 
-int	main(int argc, char **argv)
+int	main(int ac, char **av)
 {
 	char	*array;
 	t_data	*dt;
 
 	dt = malloc(sizeof(t_data));
-	if (!dt || argc > 1)
+	if (!dt || ac > 1)
 	{
-		dt->array_arg = spliting_arguments(argv);
+		dt->array_arg = spliting_arguments(av);
 		ft_double_args(dt);
 		dt->stack_b = malloc(sizeof(t_stack));
 		dt->stack_a = malloc(sizeof(t_stack));

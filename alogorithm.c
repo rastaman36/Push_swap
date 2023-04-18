@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 03:36:01 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/16 01:09:18 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/18 01:31:07 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,6 @@ void	the_last_sorting(t_data *dt)
 		if (dt->stack_b->top_of_stack->content == big_number(dt->stack_b))
 			push_a(dt);
 	}
-	sort_range(dt);
 }
 
 void	sorting_algorithm(t_data *dt)
@@ -106,5 +105,8 @@ void	sorting_algorithm(t_data *dt)
 	else if (dt->stack_a->size > 3 && dt->stack_a->size <= 5)
 		sort5(dt);
 	else
+	{
+		sort_range(dt);
 		the_last_sorting(dt);
+	}
 }

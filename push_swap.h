@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 05:18:47 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/17 03:13:32 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/17 05:35:15 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void	bonus_ss(t_data *dt);
 void	bonus_push_a(t_data *dt);
 void	bonus_push_b(t_data *dt);
 void	bonus_rotate_a(t_stack *stack);
-void	check_args(int argc, char **argv);
+void	check_args(int ac, char **av);
 void	instruction(t_data *dt, char *str);
 int		check_if_sorted(t_data *dt);
 char	*get_next_line(int fd);
