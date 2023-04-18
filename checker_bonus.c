@@ -6,7 +6,7 @@
 /*   By: mochaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 02:40:36 by mochaoui          #+#    #+#             */
-/*   Updated: 2023/04/17 05:35:45 by mochaoui         ###   ########.fr       */
+/*   Updated: 2023/04/18 05:42:48 by mochaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int	main(int ac, char **av)
 	char	*array;
 	t_data	*dt;
 
-	dt = malloc(sizeof(t_data));
+	dt = ft_calloc(1, sizeof(t_data));
 	if (!dt || ac > 1)
 	{
 		dt->array_arg = spliting_arguments(av);
